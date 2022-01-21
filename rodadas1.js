@@ -1,7 +1,7 @@
-// Versão 2
-// Tentativa de adaptar o exploratorio para um que vai excluindo jogos
-// ja utilizados
-
+// Versão 1
+// Totalmente exploratoria, com apenas 1 redutor de testes
+// que inicia a tentativa seguinte a partir do primeiro jogo encontrado
+// funcionou bem ate rodada 20. A partir do 21 ficou muito lento
 
 log = console.log
 
@@ -9,7 +9,7 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 } 
 
-exec(18)
+exec(9)
 
 async function exec(qtdTimes){
 
@@ -112,6 +112,6 @@ function criaListaJogos(qtdTimes) {
       jogos.push([null, t1, t2])
     }
   }
-  //return jogos
-  return jogos.reverse()
+  return jogos
+  //return jogos.reverse()
 }
